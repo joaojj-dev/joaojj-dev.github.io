@@ -24,7 +24,7 @@ const { section, certifications } = Astro.props;
     </a>
     <ul class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" role="list">
       {certifications.map((item) => (
-        <li class="card-surface card-interactive flex h-full flex-col p-6">
+        <li class="card-surface card-interactive flex h-full flex-col p-6" data-reveal>
           <img class="certification-image" src={item.image} alt="" loading="lazy" />
           <h3 class="mt-6 text-lg font-bold leading-7">
             <a

@@ -3,17 +3,15 @@ interface Props {
   eyebrow: string;
   title: string;
   description?: string;
-  level?: "h1" | "h2";
 }
 
-const { eyebrow, title, description, level = "h2" } = Astro.props;
-const Heading = level;
+const { eyebrow, title, description } = Astro.props;
 ---
 
-<header class="max-w-3xl">
+<header class="max-w-3xl" data-reveal>
   <p class="text-accent text-sm font-bold tracking-[0.16em] uppercase">{eyebrow}</p>
-  <Heading class="text-ink mt-4 text-3xl font-bold tracking-[-0.03em] text-balance sm:text-4xl lg:text-5xl">
+  <h2 class="text-ink mt-4 text-3xl font-bold tracking-[-0.03em] text-balance sm:text-4xl lg:text-5xl">
     {title}
-  </Heading>
+  </h2>
   {description && <p class="text-muted mt-5 text-lg leading-8">{description}</p>}
 </header>

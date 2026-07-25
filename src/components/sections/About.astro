@@ -13,7 +13,7 @@ const { content } = Astro.props;
   <div id="sobre" class="page-container section-anchor">
     <div class="max-w-4xl">
       <SectionHeading eyebrow={content.eyebrow} title={content.title} />
-      <div class="about-copy text-muted mt-8 grid gap-5 text-lg leading-8">
+      <div class="about-copy text-muted mt-8 grid gap-5 text-lg leading-8" data-reveal>
         {content.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
       </div>
     </div>

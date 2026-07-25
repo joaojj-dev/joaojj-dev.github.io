@@ -18,11 +18,10 @@ const categoryLabels = {
 const codeLabels = {
   public: copy.publicCode,
   private: copy.privateCode,
-  unavailable: copy.unavailableCode,
 };
 ---
 
-<article class="card-surface card-interactive flex h-full flex-col p-6 sm:p-7">
+<article class="card-surface card-interactive flex h-full flex-col p-6 sm:p-7" data-reveal>
   <div class="flex flex-wrap items-center justify-between gap-3">
     <p class="text-accent text-xs font-bold tracking-[0.14em] uppercase">{categoryLabels[project.category]}</p>
     <p class="text-subtle text-xs font-semibold">{codeLabels[project.codeVisibility]}</p>

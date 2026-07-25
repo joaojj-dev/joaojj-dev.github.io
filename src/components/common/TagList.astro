@@ -1,14 +1,13 @@
 ---
 interface Props {
   items: string[];
-  label?: string;
 }
 
-const { items, label } = Astro.props;
+const { items } = Astro.props;
 ---
 
 {items.length > 0 && (
-  <ul class="flex flex-wrap gap-2" role="list" aria-label={label}>
+  <ul class="flex flex-wrap gap-2" role="list">
     {items.map((item) => (
       <li class="border-line bg-canvas/45 text-muted rounded-full border px-3 py-1 text-xs font-semibold">
         {item}

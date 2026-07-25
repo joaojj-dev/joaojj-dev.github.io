@@ -1,7 +1,7 @@
 import type { Locale } from "./types";
 
 export type ProjectCategory = "professional" | "academic" | "personal";
-export type CodeVisibility = "public" | "private" | "unavailable";
+export type CodeVisibility = "public" | "private";
 
 export interface Project {
   id: string;

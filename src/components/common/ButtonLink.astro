@@ -2,7 +2,7 @@
 interface Props {
   href: string;
   label: string;
-  variant?: "primary" | "secondary" | "text";
+  variant?: "primary" | "secondary";
   download?: string;
   external?: boolean;
   ariaLabel?: string;
@@ -20,7 +20,6 @@ const {
 const variants = {
   primary: "bg-accent text-accent-ink hover:bg-accent-strong border-transparent",
   secondary: "border-line bg-surface/70 text-ink hover:border-accent/60 hover:bg-elevated",
-  text: "border-transparent text-accent hover:bg-accent/10",
 };
 ---
 

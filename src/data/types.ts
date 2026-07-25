@@ -41,7 +41,7 @@ export interface SiteContent {
   };
   hero: {
     introduction: string;
-    role: string;
+    roles: string[];
     description: string;
     projectsAction: string;
     contactAction: string;
@@ -63,7 +63,6 @@ export interface SiteContent {
     academic: string;
     personal: string;
     privateCode: string;
-    unavailableCode: string;
     publicCode: string;
     repositoryAction: string;
     liveAction: string;

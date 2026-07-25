@@ -115,7 +115,7 @@ export const content = {
     theme: { label: "Tema", light: "Claro", dark: "Escuro" },
     hero: {
       introduction: "Olá, sou o João Jorge.",
-      role: "Software Developer",
+      roles: ["Software Developer", "Full Stack Developer", "Web Developer"],
       description: "Experiência em desenvolvimento web, criação e modernização de aplicações empresariais, bases de dados e metodologias ágeis.",
       projectsAction: "Ver projetos",
       contactAction: "Contactar",
@@ -141,7 +141,6 @@ export const content = {
       academic: "Académico",
       personal: "Pessoal",
       privateCode: "Código privado",
-      unavailableCode: "Código não disponível",
       publicCode: "Código público",
       repositoryAction: "Ver repositório",
       liveAction: "Ver projeto",
@@ -203,7 +202,7 @@ export const content = {
     theme: { label: "Theme", light: "Light", dark: "Dark" },
     hero: {
       introduction: "Hello, I’m João Jorge.",
-      role: "Software Developer",
+      roles: ["Software Developer", "Full Stack Developer", "Web Developer"],
       description: "Experience in web development, creation and modernisation of business applications, databases and agile methodologies.",
       projectsAction: "View projects",
       contactAction: "Contact me",
@@ -229,7 +228,6 @@ export const content = {
       academic: "Academic",
       personal: "Personal",
       privateCode: "Private code",
-      unavailableCode: "Code unavailable",
       publicCode: "Public code",
       repositoryAction: "View repository",
       liveAction: "View project",

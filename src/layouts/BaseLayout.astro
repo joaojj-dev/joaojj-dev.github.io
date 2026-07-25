@@ -26,6 +26,7 @@ const copy = getContent(locale);
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#080b12" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <script is:inline>
       (() => {
         try {
@@ -53,5 +54,39 @@ const copy = getContent(locale);
       </main>
       <Footer {locale} />
     </div>
+    <script>
+      const initialiseRevealAnimations = () => {
+        const revealItems = [...document.querySelectorAll<HTMLElement>("[data-reveal]")];
+        if (!revealItems.length) return;
+
+        if (
+          window.matchMedia("(prefers-reduced-motion: reduce)").matches
+          || !("IntersectionObserver" in window)
+        ) {
+          revealItems.forEach((item) => item.dataset.revealed = "true");
+          return;
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              (entry.target as HTMLElement).dataset.revealed = "true";
+              observer.unobserve(entry.target);
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+        );
+
+        revealItems.forEach((item) => {
+          if (item.dataset.revealReady === "true") return;
+          item.dataset.revealReady = "true";
+          observer.observe(item);
+        });
+      };
+
+      initialiseRevealAnimations();
+      document.addEventListener("astro:page-load", initialiseRevealAnimations);
+    </script>
   </body>
 </html>
