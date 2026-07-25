@@ -1,4 +1,4 @@
-# João Jorge — Personal Portfolio
+# João Jorge Personal Portfolio
 
 Bilingual personal portfolio created to present my professional, academic and personal projects, technical skills, certifications and contact details.
 
