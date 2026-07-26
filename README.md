@@ -15,7 +15,7 @@ The website is statically generated, responsive and accessible, with light and d
 ## Project structure
 
 ```text
-public/              Static files such as the CV, favicon and robots.txt
+public/              Static files such as the CV, favicon, robots.txt and sitemap
 src/assets/          Images processed by Astro
 src/components/      Reusable interface and section components
 src/data/            Project information, shared types and external links
@@ -57,14 +57,18 @@ The development server is available at `http://localhost:4321`.
 
 ## Deployment
 
-Create the production build with:
+The website is published as a GitHub Pages User Site at:
+
+[joaojj-dev.github.io](https://joaojj-dev.github.io/)
+
+Pushes to the `main` branch trigger the GitHub Actions workflow in `.github/workflows/deploy.yml`. The workflow installs the locked dependencies, builds the Astro website and deploys the generated `dist/` directory to GitHub Pages.
+
+To create the production build locally:
 
 ```sh
 npm run build
 ```
 
-The generated `dist/` directory can be deployed to any static hosting provider. When the final domain is available, it should be added to `astro.config.mjs` so Astro can generate canonical URLs correctly.
-
 ## Repository
 
-[github.com/joaojj-dev/Portfolio](https://github.com/joaojj-dev/Portfolio)
+[github.com/joaojj-dev/joaojj-dev.github.io](https://github.com/joaojj-dev/joaojj-dev.github.io)

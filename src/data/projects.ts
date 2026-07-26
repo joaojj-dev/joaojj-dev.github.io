@@ -187,6 +187,6 @@ export const projects: Project[] = [
     category: "personal",
     technologies: ["Astro", "TypeScript", "Tailwind CSS", "HTML", "Markdown"],
     codeVisibility: "public",
-    repositoryUrl: "https://github.com/joaojj-dev/Portfolio",
+    repositoryUrl: "https://github.com/joaojj-dev/joaojj-dev.github.io",
   },
 ];
